@@ -1,7 +1,7 @@
 {
   "name": "lemonchat",
   "version": "1.0.0",
-  "description": "",
+  "description": "realtime lemon themed chat app. Keep the conversations fresh and clean, please and thank you",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server",
