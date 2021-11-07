@@ -3,8 +3,7 @@ const chatForm = document.getElementById("chat-form");
 const chatMessages = document.querySelector(".chat-messages");
 const roomName = document.getElementById("room-name");
 const userList = document.getElementById("users");
-const leave = document.getElementById("leave-btn");
-const userform = document.getElementById("userform");
+
 //get username and room from URL
 const { username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
@@ -46,7 +45,6 @@ chatForm.addEventListener("submit", (event) => {
   event.target.elements.msg.value = "";
   event.target.elements.msg.focus();
 });
-
 
 //output message to DOM
 

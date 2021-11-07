@@ -27,7 +27,10 @@ io.on("connection", (socket) => {
     socket.join(user.room);
 
     //welcome the user when they enter
-    socket.emit("message", formatMessage(username, "Welcome to Greenchat"));
+    socket.emit(
+      "message",
+      formatMessage(username, "when life gives you lemons...")
+    );
 
     //broadcast when any user connects
     socket.broadcast
@@ -47,7 +50,7 @@ io.on("connection", (socket) => {
   //listen for chatMessage
   socket.on("chatMessage", (msg) => {
     const user = getCurrentUser(socket.id);
-    io.to(user.room).emit("message", formatMessage(user.username,msg));
+    io.to(user.room).emit("message", formatMessage(user.username, msg));
   });
 
   //runs when client disconnection

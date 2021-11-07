@@ -2,9 +2,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans:wght@400;800&family=Quicksand:wght@300;400&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap");
 :root {
-  --dark-color-a: grey;
-  --dark-color-b: #686868;
-  --light-color: #e6e9ff;
+  --dark-color-a: #d1d9e6;
+  --dark-color-b: #e9e9e9;
+  --light-color: #f9fafb;
   --success-color: #5cb85c;
   --error-color: #d9534f;
 }
@@ -27,36 +27,48 @@ ul {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: burlywood;
 }
 
 .btn {
   cursor: pointer;
-  padding: 5px 15px;
-  background: var(--light-color);
-  color: var(--dark-color-a);
+  padding: 5px 10px;
+  background: #fbbf24;
+  color: whitesmoke;
   border: 0;
-  font-size: 17px;
+  font-size: 12px;
+  border-radius: 40px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#leave-btn {
+  font-size: 14px;
 }
 
 /* Chat Page */
 
 .chat-container {
   max-width: 1100px;
-  background: #fff;
+  background: rgb(245, 245, 245);
   margin: 30px auto;
   overflow: hidden;
+
+  border-radius: 4px;
+  border-radius: 20px;
+  border-radius: 20px;
+  box-shadow: 7px 30px 30px 30px #cecccc;
 }
 
 .chat-header {
-  background: var(--dark-color-a);
-  color: #fff;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   padding: 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #f9fafb;
 }
 
 .chat-main {
@@ -65,21 +77,29 @@ a {
 }
 
 .chat-sidebar {
-  background: var(--dark-color-b);
-  color: #fff;
+  background: #f3f4f6;
+  border-right: 0.1em solid rgb(176, 176, 176);
+  color: rgb(33, 33, 33);
   padding: 20px 20px 60px;
   overflow-y: scroll;
+  width: 80%;
 }
 
 .chat-sidebar h2 {
   font-size: 20px;
-  background: rgba(0, 0, 0, 0.1);
+
   padding: 10px;
   margin-bottom: 20px;
+}
+.joinchatform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .chat-sidebar h3 {
   margin-bottom: 15px;
+  color: rgb(26, 26, 26);
 }
 
 .chat-sidebar ul li {
@@ -103,7 +123,7 @@ a {
 .chat-messages .message .meta {
   font-size: 15px;
   font-weight: bold;
-  color: var(--dark-color-b);
+
   opacity: 0.7;
   margin-bottom: 7px;
 }
@@ -114,7 +134,9 @@ a {
 
 .chat-form-container {
   padding: 20px 30px;
-  background-color: var(--dark-color-a);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 7px 30px 30px 0px #cecccc;
 }
 
 .chat-form-container form {
@@ -132,20 +154,30 @@ a {
 .join-container {
   max-width: 500px;
   margin: 80px auto;
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
-
+label {
+  color: #000;
+}
 .join-header {
   text-align: center;
   padding: 20px;
-  background: var(--dark-color-a);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  background: rgb(244, 244, 244);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 7px 30px 30px 0px #cecccc;
+}
+.roomoption {
+  font-family: "Montserrat", sans-serif;
 }
 
 .join-main {
   padding: 30px 40px;
-  background: var(--dark-color-b);
+  background: whitesmoke;
+  box-shadow: 0 4px 2px -2px rgb(160, 160, 160);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 7px 30px 30px 0px #cecccc;
 }
 
 .join-main p {
@@ -167,6 +199,9 @@ a {
   height: 40px;
   width: 100%;
 }
+h1 {
+  color: #fbbf24;
+}
 
 .join-main select {
   font-size: 16px;
@@ -177,7 +212,8 @@ a {
 
 .join-main .btn {
   margin-top: 20px;
-  width: 100%;
+  width: 40%;
+  margin-left: 32%;
 }
 
 @media (max-width: 700px) {
@@ -188,4 +224,30 @@ a {
   .chat-sidebar {
     display: none;
   }
+}
+
+#username {
+  border: 2px solid white;
+  border-radius: 4px;
+}
+#room {
+  border: 2px solid white;
+  border-radius: 4px;
+}
+#msg {
+  border: 2px solid white;
+  border-radius: 4px;
+  width: 10%;
+  margin-right: 30px;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  letter-spacing: 10px;
+}
+#room {
+  font-family: "Montserrat", sans-serif;
+}
+#username {
+  font-family: "Montserrat", sans-serif;
 }
